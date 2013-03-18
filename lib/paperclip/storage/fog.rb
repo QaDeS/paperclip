@@ -159,6 +159,7 @@ module Paperclip
       end
 
       def copy_to_local_file(style, local_dest_path)
+        file = nil
         begin
           log("copying #{path(style)} to local file #{local_dest_path}")
           ::File.open(local_dest_path, 'wb') do |local_file|
